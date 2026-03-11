@@ -9,12 +9,25 @@ import { motion, AnimatePresence } from 'motion/react';
 import gamesData from './games.json';
 
 export default function App() {
-  console.log("App is rendering with games:", gamesData);
+  console.log("Arcade: App Component Rendering", { gamesData });
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGame, setSelectedGame] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const games = Array.isArray(gamesData) ? gamesData : [];
+  // Robust games data handling
+  const games = useMemo(() => {
+    if (Array.isArray(gamesData) && gamesData.length > 0) {
+      return gamesData;
+    }
+    console.warn("Arcade: No games found in games.json, using fallback debug game.");
+    return [{
+      id: 'debug-1',
+      title: 'System Check',
+      description: 'If you see this, the app is working but games.json is empty or failing to load.',
+      thumbnail: 'https://picsum.photos/seed/arcade/800/450',
+      url: '#'
+    }];
+  }, []);
 
   const filteredGames = useMemo(() => {
     return games.filter(game =>
@@ -38,7 +51,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-zinc-950">
+      {/* Debug Indicator */}
+      <div className="bg-emerald-500/20 text-emerald-500 text-[8px] py-0.5 text-center font-mono uppercase tracking-[0.5em] border-b border-emerald-500/10">
+        App Component Mounted & Active
+      </div>
+      
       {/* Header */}
       <header className="sticky top-0 z-40 glass border-b border-white/5 px-6 py-4 flex items-center justify-between">
         <div 
