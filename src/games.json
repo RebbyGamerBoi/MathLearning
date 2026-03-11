@@ -1,44 +1,30 @@
 [
   {
     "id": "1",
-    "title": "2048",
-    "description": "Join the numbers and get to the 2048 tile!",
-    "thumbnail": "https://picsum.photos/seed/2048/400/300",
-    "url": "https://play2048.co/"
+    "title": "Five Night's at Epstiens",
+    "description": "Survive the night in this intense horror experience. Can you make it until 6 AM?",
+    "thumbnail": "https://cdn.jsdelivr.net/gh/%67%6e%2d%6d%61%74%68/covers@main/710.png",
+    "url": "./fnae.html"
   },
   {
     "id": "2",
-    "title": "Hextris",
-    "description": "An addictive puzzle game inspired by Tetris.",
-    "thumbnail": "https://picsum.photos/seed/hextris/400/300",
-    "url": "https://hextris.io/"
+    "title": "Five Nights at Freddy's 1",
+    "description": "The original horror classic. Can you survive five nights as a security guard at Freddy Fazbear's Pizza?",
+    "thumbnail": "https://cdn.jsdelivr.net/gh/%67%6e%2d%6d%61%74%68/covers@main/38.png",
+    "url": "./fnaf1.html"
   },
   {
     "id": "3",
-    "title": "Flappy Bird (Clone)",
-    "description": "Fly through the pipes without hitting them.",
-    "thumbnail": "https://picsum.photos/seed/flappy/400/300",
-    "url": "https://flappybird.io/"
+    "title": "Super Mario 64",
+    "description": "The legendary 3D platformer. Explore Princess Peach's castle and collect Power Stars in this web-based port.",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKSw-eTIMSbDFddnSrXtH5xz7b0MLrXoDYFg&s",
+    "url": "./sm64.html"
   },
   {
     "id": "4",
-    "title": "Doodle Jump",
-    "description": "Jump as high as you can!",
-    "thumbnail": "https://picsum.photos/seed/doodle/400/300",
-    "url": "https://doodlejump.io/"
-  },
-  {
-    "id": "5",
-    "title": "Pac-Man",
-    "description": "Classic arcade action.",
-    "thumbnail": "https://picsum.photos/seed/pacman/400/300",
-    "url": "https://www.google.com/logos/2010/pacman10-i.html"
-  },
-  {
-    "id": "6",
-    "title": "Snake",
-    "description": "Eat the apples and grow longer.",
-    "thumbnail": "https://picsum.photos/seed/snake/400/300",
-    "url": "https://www.google.com/logos/2010/pacman10-i.html"
+    "title": "Escape Road 2",
+    "description": "Put the pedal to the metal and escape the law in this high-speed driving game.",
+    "thumbnail": "https://cdn.jsdelivr.net/gh/%67%6e%2d%6d%61%74%68/covers@main/265.png",
+    "url": "./escaperoad2.html"
   }
 ]

@@ -9,16 +9,19 @@ import { motion, AnimatePresence } from 'motion/react';
 import gamesData from './games.json';
 
 export default function App() {
+  console.log("App is rendering with games:", gamesData);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGame, setSelectedGame] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
+  const games = Array.isArray(gamesData) ? gamesData : [];
+
   const filteredGames = useMemo(() => {
-    return gamesData.filter(game =>
-      game.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      game.description.toLowerCase().includes(searchQuery.toLowerCase())
+    return games.filter(game =>
+      (game.title || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (game.description || '').toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }, [searchQuery]);
+  }, [searchQuery, games]);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -64,6 +67,9 @@ export default function App() {
         )}
 
         <div className="flex items-center gap-4">
+          <span className="text-[10px] font-mono text-emerald-500/50 uppercase tracking-widest hidden lg:block">
+            System Online
+          </span>
           <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest hidden sm:block">
             {filteredGames.length} Games Available
           </span>
