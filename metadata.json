@@ -1,0 +1,5 @@
+{
+  "name": "Unblocked Arcade",
+  "description": "A simple portal for unblocked web games stored in a JSON manifest.",
+  "requestFramePermissions": []
+}
